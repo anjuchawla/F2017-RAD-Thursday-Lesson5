@@ -120,6 +120,7 @@
             this.btnFindPrice.TabIndex = 5;
             this.btnFindPrice.Text = "&Find Price";
             this.btnFindPrice.UseVisualStyleBackColor = true;
+            this.btnFindPrice.Click += new System.EventHandler(this.btnFindPrice_Click);
             // 
             // txtPrice
             // 
@@ -132,7 +133,12 @@
             // 
             // cboType
             // 
+            this.cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboType.FormattingEnabled = true;
+            this.cboType.Items.AddRange(new object[] {
+            "Regular",
+            "Decaffeinated",
+            "Special Blend"});
             this.cboType.Location = new System.Drawing.Point(353, 57);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(121, 24);
@@ -214,6 +220,7 @@
             this.Name = "frmBulkCoffeeSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "R \'n R for Reading and Refreshment";
+            this.Load += new System.EventHandler(this.frmBulkCoffeeSales_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
