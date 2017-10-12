@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BulkCoffeeSales2017
 {
-    public partial class Form1 : Form
+    public partial class frmBulkCoffeeSales : Form
     {
-        public Form1()
+        public frmBulkCoffeeSales()
         {
             InitializeComponent();
         }
