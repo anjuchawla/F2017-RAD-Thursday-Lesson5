@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBulkCoffeeSales));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,6 +44,8 @@
             this.rdoFullPound = new System.Windows.Forms.RadioButton();
             this.rdoHalfPound = new System.Windows.Forms.RadioButton();
             this.rdoQuarterPound = new System.Windows.Forms.RadioButton();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +96,7 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnPrint
             // 
@@ -102,6 +106,7 @@
             this.btnPrint.TabIndex = 7;
             this.btnPrint.Text = "&Print";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnClear
             // 
@@ -111,6 +116,7 @@
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnFindPrice
             // 
@@ -184,6 +190,7 @@
             this.rdoFullPound.TabStop = true;
             this.rdoFullPound.Text = "F&ull Pound";
             this.rdoFullPound.UseVisualStyleBackColor = true;
+            this.rdoFullPound.CheckedChanged += new System.EventHandler(this.RadioButtonQuantity_CheckedChanged);
             // 
             // rdoHalfPound
             // 
@@ -195,6 +202,7 @@
             this.rdoHalfPound.TabStop = true;
             this.rdoHalfPound.Text = "&Half Pound";
             this.rdoHalfPound.UseVisualStyleBackColor = true;
+            this.rdoHalfPound.CheckedChanged += new System.EventHandler(this.RadioButtonQuantity_CheckedChanged);
             // 
             // rdoQuarterPound
             // 
@@ -206,6 +214,21 @@
             this.rdoQuarterPound.TabStop = true;
             this.rdoQuarterPound.Text = "&Quarter Pound";
             this.rdoQuarterPound.UseVisualStyleBackColor = true;
+            this.rdoQuarterPound.CheckedChanged += new System.EventHandler(this.RadioButtonQuantity_CheckedChanged);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // frmBulkCoffeeSales
             // 
@@ -247,6 +270,8 @@
         private System.Windows.Forms.RadioButton rdoFullPound;
         private System.Windows.Forms.RadioButton rdoHalfPound;
         private System.Windows.Forms.RadioButton rdoQuarterPound;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 
